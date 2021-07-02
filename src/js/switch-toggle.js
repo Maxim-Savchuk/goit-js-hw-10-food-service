@@ -6,6 +6,10 @@ const Theme = {
 const switchThemeBtn = document.getElementById('theme-switch-toggle');
 const { LIGHT, DARK } = Theme;
 
+if (!localStorage.theme) {
+        localStorage.theme = LIGHT
+    }
+
 function onSetTheme(theme) {
     localStorage.setItem('theme', theme);
     document.body.className = theme;
@@ -27,6 +31,7 @@ function onCheckTheme() {
         switchThemeBtn.checked = true;
     }
 }
+
 
 switchThemeBtn.addEventListener('change', onChangeTheme);
 window.onload = onCheckTheme();
