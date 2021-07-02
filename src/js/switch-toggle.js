@@ -7,7 +7,7 @@ const switchThemeBtn = document.getElementById('theme-switch-toggle');
 const { LIGHT, DARK } = Theme;
 
 if (!localStorage.theme) {
-        localStorage.theme = LIGHT
+    localStorage.theme = LIGHT;
     }
 
 function onSetTheme(theme) {
